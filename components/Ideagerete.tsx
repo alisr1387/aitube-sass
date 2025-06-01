@@ -1,32 +1,32 @@
 "use client";
 
-import { useUser } from "@clerk/nextjs";
-import Usage from "./Usage";
-import { FeatureFlag } from "@/features/flags";
-import { useSchematicEntitlement } from "@schematichq/schematic-react";
-import { Copy } from "lucide-react";
+// import { useUser } from "@clerk/nextjs";
+// import Usage from "./Usage";
+// import { FeatureFlag } from "@/features/flags";
+// import { useSchematicEntitlement } from "@schematichq/schematic-react";
+// import { Copy } from "lucide-react";
 // import { useQuery } from "convex/react";
 // import { api } from "@/convex/_generated/api";
-import { toast } from "sonner";
+// import { toast } from "sonner";
 
-function IdeaGenerations({ videoId }: { videoId: string }) {
-  const { user } = useUser();
+// function IdeaGenerations({ videoId }: { videoId: string }) {
+  // const { user } = useUser();
   // const titles = useQuery(api.titles.list, { videoId, userId: user?.id ?? "" });
-const Ideas=[]
-  const { value: isTitleGenerationEnabled } = useSchematicEntitlement(
-    FeatureFlag.IDEA_GENERATION
-  );
+// const Ideas=[]
+//   const { value: isTitleGenerationEnabled } = useSchematicEntitlement(
+//     FeatureFlag.IDEA_GENERATION
+//   );
 
-  const copyToClipboard = (text: string) => {
-    navigator.clipboard.writeText(text);
-    toast.success("Copied to clipboard");
-  };
+  // const copyToClipboard = (text: string) => {
+  //   navigator.clipboard.writeText(text);
+  //   toast.success("Copied to clipboard");
+  // };
 
-  return (
-    <div className="p-4 border border-gray-200 rounded-xl bg-white shadow-sm">
-      <div className="min-w-52">
-        <Usage featureFlag={FeatureFlag.IDEA_GENERATION} title="Ideas" />
-      </div>
+  // return (
+  //   <div className="p-4 border border-gray-200 rounded-xl bg-white shadow-sm">
+  //     <div className="min-w-52">
+  //       <Usage featureFlag={FeatureFlag.IDEA_GENERATION} title="Ideas" />
+  //     </div>
 {/* 
       <div className="space-y-3 mt-4 max-h-[280px] overflow-y-auto">
         {titles?.map((title) => (
@@ -52,16 +52,16 @@ const Ideas=[]
        </div> */}
 
       {/* No titles generated yet */}
-      {!Ideas?.length && !!isTitleGenerationEnabled && (
-        <div className="text-center py-8 px-4 rounded-lg mt-4 border-2 border-dashed border-gray-200">
-          <p className="text-gray-500">No Idea have been generated yet</p>
-          <p className="text-sm text-gray-400 mt-1">
-            Generate Ideas to see them appear here
-          </p>
-        </div>
-      )}
-    </div>
-  );
-}
+//       {!Ideas?.length && !!isTitleGenerationEnabled && (
+//         <div className="text-center py-8 px-4 rounded-lg mt-4 border-2 border-dashed border-gray-200">
+//           <p className="text-gray-500">No Idea have been generated yet</p>
+//           <p className="text-sm text-gray-400 mt-1">
+//             Generate Ideas to see them appear here
+//           </p>
+//         </div>
+//       )}
+//     </div>
+//   );
+// }
 
-export default IdeaGenerations;
+// export default IdeaGenerations;

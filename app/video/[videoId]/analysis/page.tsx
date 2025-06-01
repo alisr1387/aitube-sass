@@ -1,5 +1,6 @@
 "use client";
 
+import AiAgentChat from "@/components/AiAgentChat";
 import IdeaGenerations from "@/components/Ideagerete";
 import ThumbnailGeneration from "@/components/ThumbnailGeneration";
 import TitleGenerations from "@/components/TitleGenerations";
@@ -154,8 +155,8 @@ const AnalysisPage = () => {
         {/* Right Side */}
         <div className="order-1 lg:order-2 lg:sticky lg:top-20 h-[500px] md:h-[calc(100vh-6rem)]">
           {/* Ai Agent Chat Section */}
-          right
-          {/* <AiAgentChat videoId={videoId} /> */}
+          
+          <AiAgentChat videoId={videoId} />
         </div>
       </div>
     </div>
